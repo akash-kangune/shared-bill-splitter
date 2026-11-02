@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #20243a;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  margin: 4px 0;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+}
+
+.header h1 span {
+  color: #6558d3;
+}
+
+.eyebrow {
+  color: #6558d3;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.subtitle,
+.muted {
+  color: #85899b;
+  font-size: 14px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #e9eaf1;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(30, 35, 70, 0.035);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 19px;
+}
+
+.panel h3 {
+  font-size: 15px;
+}
+
+.welcome {
+  background: #eeecff;
+  border-color: #e2dfff;
+}
+
+.welcome h2 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dedfea;
+  border-radius: 9px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #6558d3;
+  box-shadow: 0 0 0 3px #6558d31a;
+}
+
+button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #6558d3;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5144bd;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.member-list,
+.balance-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.member-list li,
+.balance-list li {
+  padding: 13px 0;
+  border-bottom: 1px solid #f0f0f4;
+}
+
+.balance-list li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance-list strong {
+  color: #6558d3;
+}
+
+.bill {
+  border: 1px solid #eeeef4;
+  border-radius: 12px;
+  padding: 18px;
+  margin-top: 16px;
+}
+
+.bill-heading h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid #f0f0f4;
+}
+
+.share p {
+  margin: 4px 0 0;
+}
+
+.paid {
+  color: #16865b;
+  background: #e5f7ee;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pay-button {
+  padding: 9px 14px;
+  font-size: 12px;
+}
+
+.error {
+  padding: 14px;
+  margin-bottom: 20px;
+  background: #fff0f0;
+  color: #c43e3e;
+  border-radius: 9px;
+}
+
+@media (max-width: 650px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
