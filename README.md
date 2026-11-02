@@ -155,3 +155,14 @@ You must understand every line you submit. We check this with your video and in 
 5. Paste the repository link and the video link in the application form.
 
 We will run `pnpm install && pnpm check && pnpm typecheck && pnpm test` on your repository.
+
+## Decisions
+
+### 1. Store money in integer cents
+I used integer cents instead of decimal values to avoid floating-point calculation errors. This ensures that every bill is split accurately and the total of all shares always matches the original bill amount.
+
+### 2. Distribute remaining cents in member order
+When a bill cannot be divided equally, the extra cents are distributed one by one in the order members were added to the home. This makes the splitting logic predictable and fair.
+
+### 3. Use database constraints and idempotency for payment safety
+I used named SQL constraints to protect data integrity through foreign keys, validation checks, and uniqueness. I also store an idempotency key for payments so repeated requests do not pay the same share twice.
